@@ -1,0 +1,102 @@
+/* assets/css/style.css */
+/* Import de la police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #495057 !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #0056b3 !important;
+}
+
+.hero {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-project, .card-skill {
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card-project:hover, .card-skill:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.badge-skill {
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* ===== Widget étoiles interactif (ajout/édition) ===== */
+.star-rating {
+  direction: rtl;
+  display: inline-flex;
+  font-size: 2rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  cursor: pointer;
+  color: #ccc;
+  padding: 0 0.1rem;
+  transition: color .2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f5b301;
+}
+
+.star-rating input:checked ~ label {
+  color: #f5b301;
+}
+
+/* ===== Affichage statique des étoiles ===== */
+.star-display {
+  display: inline-block;
+  font-size: 1rem;
+  color: #ccc;
+}
+.star-display .filled {
+  color: #f5b301;
+}
+.star-display span {
+  margin-right: 0.1rem;
+}
